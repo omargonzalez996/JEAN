@@ -1,0 +1,47 @@
+.hero-section {
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+
+  .parallax-container {
+    height: 400px; /* Altura de la sección parallax */
+    overflow: hidden;
+    position: relative;
+  }
+
+  .parallax {
+    background: url("../../public/banner.jpeg") center/cover no-repeat;
+    height: 100%;
+    transform: translateY(-50%);
+    position: relative;
+    z-index: -1;
+  }
+
+  h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    padding: 100px 0;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+
+  p {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+  /* Media Query para hacer el efecto parallax más responsivo */
+  @media (max-width: 768px) {
+    .parallax-container {
+      height: 250px; /* Ajusta la altura para pantallas más pequeñas */
+    }
+
+    h1 {
+      font-size: 24px; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+      padding: 50px 0; /* Ajusta el relleno superior e inferior */
+    }
+  }
+}

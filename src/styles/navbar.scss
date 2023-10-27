@@ -1,0 +1,74 @@
+/* Navbar.scss */
+* {
+  transition: all 0.5s;
+}
+
+.navbar {
+  background-color: #202020;
+  color: #fff;
+  padding: 15px 0;
+  position: relative;
+  transition: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+
+    li {
+      margin-left: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+
+  /* Media Query para hacer la barra de navegación responsive */
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #202020;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      left: 0;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      li {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+        margin-left: 0;
+        margin-right: 25px;
+      }
+      &.open {
+        display: flex;
+      }
+    }
+  }
+}
