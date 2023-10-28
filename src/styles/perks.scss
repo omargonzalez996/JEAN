@@ -1,0 +1,83 @@
+.perks-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 300px;
+  .perk-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    .perk-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #202020;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      .perk-iconify {
+        font-size: 70px;
+      }
+    }
+    .perk-desc {
+      width: 150px;
+      p {
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .perks-container {
+    flex-wrap: wrap;
+    gap: 10px; /* Espacio entre elementos */
+    justify-content: unset;
+    height: auto;
+    .perk-cont {
+      flex: 1;
+      flex-direction: row;
+      .perk-icon {
+        width: 60px;
+        height: 60px;
+        .perk-iconify {
+          font-size: 40px;
+        }
+      }
+      .perk-desc {
+        margin-left: 30px;
+        p {
+          font-size: 17px;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 525px) {
+  .perks-container {
+    .perk-cont {
+      flex-direction: column;
+      width: 150px;
+      height: 150px;
+      .perk-icon {
+        .perk-iconify {
+          font-size: 35px;
+        }
+      }
+      .perk-desc {
+        height: 100px;
+        margin-left: 0;
+        p {
+          font-size: 17px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

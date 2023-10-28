@@ -4,13 +4,14 @@
 }
 
 .navbar {
-  background-color: #202020;
-  color: #fff;
+  background-color: #f5f5f5;
+  color: #202020;
   padding: 15px 0;
-  position: relative;
+  position: fixed;
   transition: 0.3s;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
+  width: 100%;
+  z-index: 100;
   .nav-container {
     display: flex;
     justify-content: space-between;
@@ -22,6 +23,9 @@
 
   .logo {
     font-size: 24px;
+    .logo-navbar {
+      width: 70px;
+    }
   }
 
   .menu-icon {
@@ -40,7 +44,9 @@
 
     a {
       text-decoration: none;
-      color: #fff;
+      color: #202020;
+      font-size: 18px;
+      font-weight: 500;
     }
   }
 
@@ -53,7 +59,7 @@
     .nav-links {
       display: none;
       flex-direction: column;
-      background-color: #202020;
+      background-color: #f5f5f5;
       position: absolute;
       top: 50px;
       right: 0;
@@ -62,12 +68,20 @@
       li {
         display: flex;
         justify-content: flex-end;
-        margin-bottom: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
         margin-left: 0;
         margin-right: 25px;
       }
       &.open {
         display: flex;
+      }
+    }
+
+    .logo {
+      font-size: 24px;
+      .logo-navbar {
+        width: 45px;
       }
     }
   }

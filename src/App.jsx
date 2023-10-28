@@ -1,12 +1,17 @@
-import { useState } from "react";
 import Navbar from "./components/navbar";
-import Hero from "./components/Hero";
+import Carrousel from "./components/Carrousel";
+import Socials from "./components/Socials";
+import Perks from "./components/Perks";
+import Products from "./components/Products";
 
 function App() {
   return (
     <div className="app">
       <Navbar />
-      <Hero />
+      <Carrousel />
+      <Products />
+      <Perks />
+      <Socials />
     </div>
   );
 }

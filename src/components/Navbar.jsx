@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Icon } from "@iconify/react";
+import logo from "../../public/logo_jc2.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-container">
         <div className="logo">
-          <Icon icon="healthicons:gym" width={30}/>
+          <img className="logo-navbar" src={logo} alt="logo.png" />
         </div>
         <div className="menu-icon" onClick={toggleNavbar}>
           {isOpen ? (
@@ -24,10 +25,10 @@ const Navbar = () => {
         </div>
         <ul className={`nav-links ${isOpen ? "open" : ""}`}>
           <li>
-            <a href="/">Inicio</a>
+            <a href="/">Productos</a>
           </li>
           <li>
-            <a href="/about">Acerca</a>
+            <a href="/about">Nosotros</a>
           </li>
           <li>
             <a href="/contact">Contacto</a>

@@ -3,20 +3,6 @@
   text-align: center;
   padding: 100px 0;
 
-  .parallax-container {
-    height: 400px; /* Altura de la sección parallax */
-    overflow: hidden;
-    position: relative;
-  }
-
-  .parallax {
-    background: url("../../public/banner.jpeg") center/cover no-repeat;
-    height: 100%;
-    transform: translateY(-50%);
-    position: relative;
-    z-index: -1;
-  }
-
   h1 {
     text-align: center;
     color: #fff;
