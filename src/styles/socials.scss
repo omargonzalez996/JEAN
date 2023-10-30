@@ -5,9 +5,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   height: 200px;
   width: 100px;
+  z-index: 100;
+  .social-icon {
+    font-size: 3em;
+  }
 }
 
 @media (max-width: 768px) {
@@ -18,7 +22,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 180px;
+    height: 200px;
     width: 70px;
+  }
+  .social-icon {
+    .social-icon {
+      font-size: 50;
+    }
   }
 }

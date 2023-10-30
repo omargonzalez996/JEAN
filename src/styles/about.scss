@@ -1,0 +1,31 @@
+.about-container {
+  display: block;
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  .about-title {
+    neg {
+      color: #beb200;
+    }
+  }
+  .about-cont {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    h3 {
+      color: #beb200;
+    }
+    p {
+      color: #202020;
+    }
+  }
+}

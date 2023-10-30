@@ -1,17 +1,27 @@
-import Navbar from "./components/navbar";
-import Carrousel from "./components/Carrousel";
-import Socials from "./components/Socials";
-import Perks from "./components/Perks";
-import Products from "./components/Products";
+import { lazy, Suspense } from "react";
+import { Icon } from "@iconify/react";
 
+const Navbar = lazy(() => import("./components/navbar"));
+const Carrousel = lazy(() => import("./components/Carrousel"));
+const Socials = lazy(() => import("./components/Socials"));
+const Perks = lazy(() => import("./components/Perks"));
+const Products = lazy(() => import("./components/Products"));
+const About = lazy(() => import("./components/About"));
+const Footer = lazy(() => import("./components/Footer"));
+const Contact = lazy(() => import("./components/Contact"));
 function App() {
   return (
     <div className="app">
       <Navbar />
-      <Carrousel />
-      <Products />
-      <Perks />
       <Socials />
+      <Carrousel />
+      <Perks />
+      <Suspense fallback={<Icon icon="eos-icons:three-dots-loading" />}>
+        <Products />
+        <About />
+        <Contact />
+        <Footer />
+      </Suspense>
     </div>
   );
 }

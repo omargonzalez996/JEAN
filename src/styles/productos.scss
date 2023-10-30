@@ -4,43 +4,103 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 25px;
+    text-align: center;
     neg {
       color: #beb200;
     }
   }
   .product-categories {
-    display: flex;
+    background-color: #202020;
+    display: block;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
-    button {
-      background-color: #f5f5f5;
-      height: 50px;
-      width: 180px;
-      color: #202020;
+    width: 80%;
+    padding-bottom: 10px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    .categories-title {
+      color: #ffef03;
       font-size: 20px;
-      border: none;
-      border-radius: 30px;
+      padding: 10px;
+      padding-left: 30px;
+    }
+    .categories-desc {
+      padding: 10px;
+      padding-left: 30px;
+      color: #f5f5f5;
+      font-size: 18px;
+    }
+    .categories-buttons {
+      background-color: #ffef03;
+      width: 102%;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      transition: 0.5s ease-in-out;
-      &.active {
-        background-color: #202020;
-        color: #ffef03;
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      button {
+        background-color: transparent;
+        height: 50px;
+        color: #adabab;
+        font-size: 20px;
+        border: none;
+        transition: 0.5s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        &.active {
+          color: #202020;
+        }
       }
     }
   }
   .productos {
     margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
     .producto {
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      width: 100px;
+      max-width: 140px;
+      width: 130px;
+      flex-grow: 1;
+      margin: 10px;
       .producto-img {
+        width: 100%;
+        height: 150px;
         img {
-          width: 100px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
       .producto-desc {
-        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h3 {
+          text-align: center;
+          margin: 0;
+          margin: 0;
+          padding: 5px;
+          background-color: #202020;
+          font-size: 14px;
+          width: 101%;
+          color: #ffef03;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        p {
+          text-align: center;
+          font-size: 12px;
+        }
       }
     }
   }
