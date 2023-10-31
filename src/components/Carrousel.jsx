@@ -8,6 +8,14 @@ const Carrousel = () => {
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
   const styleTrans = { transform: `translate(-${currentIndex * 100}%)` };
+
+  const parallax = document.getElementById("parallax");
+
+  window.addEventListener("carro", function () {
+    let offset = window.scrollY;
+    parallax.style.backgroundPositionY = offset * 0.7 + "px";
+  });
+
   const infinteScroll = () => {
     if (currentIndex === data.length - 1) {
       return setCurrentIndex(0);
@@ -26,7 +34,12 @@ const Carrousel = () => {
     <div className="carousel-container">
       {data.map((item, index) => {
         return (
-          <div className="carousel-item" key={index} style={styleTrans}>
+          <div
+            id="carro"
+            className="carousel-item"
+            key={index}
+            style={styleTrans}
+          >
             <img src={item} alt={index} />
           </div>
         );
