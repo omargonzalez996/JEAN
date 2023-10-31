@@ -9,6 +9,7 @@ const Products = lazy(() => import("./components/Products"));
 const About = lazy(() => import("./components/About"));
 const Footer = lazy(() => import("./components/Footer"));
 const Contact = lazy(() => import("./components/Contact"));
+
 function App() {
   return (
     <div className="app">

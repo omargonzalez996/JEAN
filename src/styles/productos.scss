@@ -112,10 +112,22 @@
       font-weight: 200;
     }
     .product-categories {
-      button {
-        height: 40px;
-        width: 120px;
+      .categories-title {
+        font-size: 18px;
+        padding: 5px;
+        padding-left: 30px;
+      }
+      .categories-desc {
         font-size: 15px;
+        padding: 5px;
+        padding-left: 30px;
+      }
+      .categories-buttons {
+        button {
+          height: 40px;
+          width: 120px;
+          font-size: 13px;
+        }
       }
     }
     .productos {
